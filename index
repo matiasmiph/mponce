@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases Particulares | Ingeniero UTFSM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e', // Azul muy oscuro, casi negro, transmite seriedad
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos base personalizados */
+        body { font-family: 'Inter', sans-serif; }
+        .hero-pattern {
+            background-color: #0c4a6e;
+            background-image: radial-gradient(#1e3a8a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-square-root-variable text-brand-600 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Mentoría<span class="text-brand-600">Lógica</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre-mi" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Sobre mí</a>
+                    <a href="#metodologia" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Metodología</a>
+                    <a href="#precios" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Planes y Tarifas</a>
+                    <a href="#contacto" class="bg-brand-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-brand-700 transition-colors">Agendar Diagnóstico</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 flex flex-col md:flex-row items-center">
+            <div class="md:w-3/5 md:pr-12 text-center md:text-left">
+                <div class="inline-block bg-brand-500/20 text-brand-100 px-4 py-1 rounded-full text-sm font-semibold tracking-wide mb-6 border border-brand-500/30">
+                    Clases Presenciales en Osorno y 100% Online
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    De la frustración a los resultados: <span class="text-brand-500">Matemáticas con estructura.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto md:mx-0">
+                    Soy Ingeniero Civil Industrial de la UTFSM. Ayudo a estudiantes a dominar las ciencias exactas y la programación mediante el razonamiento lógico, no memorizando fórmulas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contacto" class="bg-brand-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-400 transition-all shadow-lg shadow-brand-500/30 flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Solicitar Sesión Gratis
+                    </a>
+                    <a href="#precios" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all text-center">
+                        Ver Tarifas
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-2/5 mt-12 md:mt-0 hidden md:block">
+                <!-- Ilustración abstracta representativa -->
+                <div class="relative w-full aspect-square max-w-md mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-brand-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                    <div class="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 h-full flex flex-col justify-center items-center shadow-2xl">
+                        <i class="fa-solid fa-code text-6xl text-brand-100 mb-6"></i>
+                        <i class="fa-solid fa-chart-line text-6xl text-brand-400 mb-6 ml-12"></i>
+                        <i class="fa-solid fa-calculator text-6xl text-white mr-12"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <!-- Contenedor para tu Foto -->
+                <div class="md:w-1/3 w-2/3 max-w-sm relative">
+                    <div class="absolute inset-0 bg-brand-600 rounded-2xl transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <!-- REEMPLAZA ESTE SRC CON EL LINK DE TU FOTO GENERADA -->
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Retrato Profesor" class="relative rounded-2xl shadow-xl object-cover aspect-[9/16] w-full">
+                </div>
+                
+                <!-- Texto -->
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Ingeniero Civil Industrial (UTFSM)</h2>
+                    <h3 class="text-xl text-brand-600 font-medium mb-6">Especialista en Lógica y Resolución de Problemas</h3>
+                    
+                    <div class="space-y-4 text-slate-600 text-lg">
+                        <p>
+                            Mi enfoque no se basa en la memorización, sino en transformar problemas complejos en soluciones estructuradas. Esta capacidad me permite analizar datos y optimizar procesos en el mundo real, herramientas que hoy pongo a tu disposición.
+                        </p>
+                        <div class="bg-slate-50 border-l-4 border-brand-500 p-6 rounded-r-lg shadow-sm my-6">
+                            <h4 class="font-bold text-slate-900 mb-2 flex items-center">
+                                <i class="fa-solid fa-award text-brand-500 mr-2"></i> Mi Respaldo Académico
+                            </h4>
+                            <p class="mb-2"><strong>Dominio Exacto:</strong> Formación universitaria rigurosa en ciencias exactas e ingeniería.</p>
+                            <p><strong>Alto Rendimiento:</strong> Obtuve <strong>785 puntos en Matemáticas</strong> (a 3 respuestas del puntaje nacional). Conozco de primera mano la estrategia para enfrentar estas evaluaciones con éxito.</p>
+                        </div>
+                        <p>
+                            Llevo a mis sesiones un enfoque práctico. No solo busco que apruebes un examen, sino que aprendas a pensar de manera estructurada y obtengas herramientas concretas para dominar los contenidos con seguridad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología y Sesión de Diagnóstico -->
+    <section id="metodologia" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">¿Cómo empezamos?</h2>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-12">El primer paso es gratuito. Una sesión estratégica de 45 minutos para evaluar el nivel y trazar un plan de acción.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Paso 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-50 text-brand-600 font-bold px-4 py-2 rounded-bl-2xl">01</div>
+                    <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Preparación Previa</h3>
+                    <p class="text-slate-600">Me envías el temario o material del colegio por adelantado. Preparo un ejercicio clave específicamente diseñado para detectar vacíos conceptuales.</p>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-b-4 border-brand-500 relative overflow-hidden transform md:-translate-y-2 transition-transform">
+                    <div class="absolute top-0 right-0 bg-brand-500 text-white font-bold px-4 py-2 rounded-bl-2xl">02</div>
+                    <div class="w-16 h-16 bg-brand-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Choque de Realidad (En vivo)</h3>
+                    <p class="text-slate-600">En los primeros 30 min, resolvemos un problema juntos. Te demuestro que intentar usar fórmulas de memoria lleva a errores, y te enseño a deducir la solución con lógica.</p>
+                </div>
+                
+                <!-- Paso 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-50 text-brand-600 font-bold px-4 py-2 rounded-bl-2xl">03</div>
+                    <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Plan con Apoderados</h3>
+                    <p class="text-slate-600">Dedicamos 10 minutos extra al final de la sesión para hablar con los padres/tutores. Presento el diagnóstico honesto y un plan de trabajo mensual estructurado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes y Tarifas -->
+    <section id="precios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Planes de Estudio Mensuales</h2>
+                <p class="text-xl text-slate-600">Invierte en educación de calidad y asegura tus resultados. Pagos mediante transferencia bancaria.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Tarjeta Mates/Fisica -->
+                <div class="bg-white border-2 border-slate-100 rounded-3xl p-8 shadow-lg hover:border-brand-300 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Matemáticas y Física</h3>
+                        <i class="fa-solid fa-square-root-variable text-3xl text-brand-500"></i>
+                    </div>
+                    <p class="text-slate-500 mb-6">Educación Media y Preparación PAES (M1/M2). Enfoque práctico y resolución de facsímiles.</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-slate-900">$15.000</span>
+                        <span class="text-slate-500">/hora suelta</span>
+                    </div>
+                    
+                    <div class="bg-slate-50 rounded-xl p-4 mb-6">
+                        <p class="font-bold text-slate-900 mb-1">Packs Mensuales (Recomendado):</p>
+                        <ul class="space-y-2 text-slate-700">
+                            <li class="flex justify-between border-b border-slate-200 pb-1"><span>Pack 4 Horas:</span> <span class="font-bold">$50.000</span></li>
+                            <li class="flex justify-between border-b border-slate-200 pb-1"><span>Pack 13 Horas:</span> <span class="font-bold">$150.000</span></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 text-slate-600">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Diagnóstico de nivel.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Guías y ejercicios enfocados en PAES.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Resolución de dudas por WhatsApp.</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta Programación -->
+                <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-xl relative overflow-hidden transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Nivel Universitario</div>
+                    <div class="flex items-center justify-between mb-4 mt-2">
+                        <h3 class="text-2xl font-bold">Programación (Python)</h3>
+                        <i class="fa-brands fa-python text-3xl text-brand-400"></i>
+                    </div>
+                    <p class="text-slate-400 mb-6">Ideal para ramos de primer año. Algoritmos, lógica de programación, y estructuras de datos.</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold">$18.000</span>
+                        <span class="text-slate-400">/hora suelta</span>
+                    </div>
+                    
+                    <div class="bg-white/10 rounded-xl p-4 mb-6">
+                        <p class="font-bold mb-1">Packs Mensuales (Recomendado):</p>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex justify-between border-b border-white/10 pb-1"><span>Pack 4 Horas:</span> <span class="font-bold text-white">$60.000</span></li>
+                            <li class="flex justify-between border-b border-white/10 pb-1"><span>Pack 13 Horas:</span> <span class="font-bold text-white">$180.000</span></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 text-slate-300">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-400 mt-1 mr-2"></i> Entornos reales (Colab, Spyder).</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-400 mt-1 mr-2"></i> Código comentado post-clase.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-400 mt-1 mr-2"></i> Apoyo en proyectos universitarios.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Verificación -->
+    <footer id="contacto" class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start text-white mb-4">
+                        <i class="fa-solid fa-square-root-variable text-brand-500 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl tracking-tight">Mentoría<span class="text-brand-500">Lógica</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400">Educación con estructura de ingeniería.</p>
+                    <p class="text-sm text-slate-400 mt-1">Osorno, Región de Los Lagos / Online Chile.</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <!-- REEMPLAZA ESTE NUMERO CON TU WHATSAPP REAL -->
+                    <a href="https://wa.me/56900000000?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20de%20diagnóstico%20gratuita." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold transition-colors flex items-center">
+                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Escríbeme al WhatsApp
+                    </a>
+                    
+                    <!-- Link Discreto de Verificación -->
+                    <a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" class="text-xs text-slate-500 hover:text-brand-400 transition-colors mt-4 flex items-center">
+                        <i class="fa-solid fa-lock text-[10px] mr-1"></i> Verificar Credenciales Académicas
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-xs text-slate-500">
+                &copy; 2026. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <!-- REEMPLAZA EL NUMERO EN EL HREF -->
+    <a href="https://wa.me/56900000000?text=Hola,%20vengo%20de%20tu%20sitio%20web%20y%20me%20interesan%20las%20clases." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-transform hover:scale-110 z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
