@@ -189,6 +189,12 @@
                         <i class="fa-solid fa-square-root-variable text-3xl text-brand-500"></i>
                     </div>
                     <p class="text-slate-500 mb-6">Educación Media y Preparación PAES (M1/M2). Enfoque práctico y resolución de facsímiles.</p>
+                    
+                    <div class="bg-green-100 text-green-800 border-l-4 border-green-500 p-3 mb-6 rounded-r-lg font-bold flex items-center shadow-sm">
+                        <i class="fa-solid fa-gift text-green-600 text-xl mr-3 hover:scale-110 transition-transform"></i>
+                        <span>¡1ra clase de diagnóstico <span class="uppercase">Gratis</span>!</span>
+                    </div>
+
                     <div class="mb-6">
                         <span class="text-4xl font-extrabold text-slate-900">$15.000</span>
                         <span class="text-slate-500">/hora suelta</span>
@@ -217,6 +223,12 @@
                         <i class="fa-brands fa-python text-3xl text-brand-400"></i>
                     </div>
                     <p class="text-slate-400 mb-6">Ideal para ramos de primer año. Algoritmos, lógica de programación, y estructuras de datos.</p>
+                    
+                    <div class="bg-green-500/10 text-green-400 border-l-4 border-green-500 p-3 mb-6 rounded-r-lg font-bold flex items-center">
+                        <i class="fa-solid fa-gift text-green-400 text-xl mr-3 hover:scale-110 transition-transform"></i>
+                        <span>¡1ra clase de diagnóstico <span class="uppercase">Gratis</span>!</span>
+                    </div>
+
                     <div class="mb-6">
                         <span class="text-4xl font-extrabold">$18.000</span>
                         <span class="text-slate-400">/hora suelta</span>
@@ -260,9 +272,14 @@
                     </a>
                     
                     <!-- Link Discreto de Verificación -->
-                    <a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" class="text-xs text-slate-500 hover:text-brand-400 transition-colors mt-4 flex items-center">
-                        <i class="fa-solid fa-lock text-[10px] mr-1"></i> Verificar Credenciales Académicas
-                    </a>
+                    <button onclick="document.getElementById('modal-credenciales').classList.remove('hidden')" class="text-xs text-slate-500 hover:text-brand-400 transition-colors mt-4 flex items-center">
+                        <i class="fa-solid fa-shield text-[10px] mr-1"></i> Verificar Credenciales y Antecedentes
+                    </button>
+                    
+                    <!-- Link a Términos y Condiciones -->
+                    <button onclick="document.getElementById('modal-terminos').classList.remove('hidden')" class="text-xs text-slate-500 hover:text-brand-400 transition-colors mt-2 flex items-center">
+                        <i class="fa-solid fa-file-contract text-[10px] mr-1"></i> Términos y Condiciones del Servicio
+                    </button>
                 </div>
             </div>
             
@@ -271,6 +288,113 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal de Credenciales y Antecedentes -->
+    <div id="modal-credenciales" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 transition-opacity">
+        <div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 shadow-2xl relative">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-slate-900">Credenciales y Seguridad</h3>
+                <button onclick="document.getElementById('modal-credenciales').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 transition-colors">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            
+            <p class="text-sm text-slate-600 mb-6">La transparencia es fundamental en la educación. Haz clic en los siguientes enlaces para revisar mi documentación de respaldo (se abrirán en una nueva pestaña):</p>
+            
+            <div class="space-y-3">
+                <!-- LinkedIn -->
+                <a href="URL_A_TU_LINKEDIN" target="_blank" class="flex items-center p-3 rounded-xl border border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mr-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin-in text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">Perfil de LinkedIn</p>
+                        <p class="text-xs text-slate-500">Trayectoria profesional completa</p>
+                    </div>
+                </a>
+                
+                <!-- CV -->
+                <a href="URL_A_TU_CV_EN_DRIVE" target="_blank" class="flex items-center p-3 rounded-xl border border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center mr-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">Curriculum Vitae (CV)</p>
+                        <p class="text-xs text-slate-500">Documento en formato PDF</p>
+                    </div>
+                </a>
+
+                <!-- Título -->
+                <a href="URL_A_TU_TITULO_EN_DRIVE" target="_blank" class="flex items-center p-3 rounded-xl border border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center mr-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-graduation-cap text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">Certificado de Título UTFSM</p>
+                        <p class="text-xs text-slate-500">Ingeniería Civil Industrial</p>
+                    </div>
+                </a>
+
+                <!-- PSU -->
+                <a href="URL_A_TU_PUNTAJE_EN_DRIVE" target="_blank" class="flex items-center p-3 rounded-xl border border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mr-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-award text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">Certificado Puntaje PSU</p>
+                        <p class="text-xs text-slate-500">785 pts. en Matemáticas</p>
+                    </div>
+                </a>
+
+                <!-- Antecedentes -->
+                <a href="URL_A_ANTECEDENTES_EN_DRIVE" target="_blank" class="flex items-center p-3 rounded-xl border border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center mr-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-id-card text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">Certificado de Antecedentes</p>
+                        <p class="text-xs text-slate-500">Fines particulares / especiales</p>
+                    </div>
+                </a>
+
+                <!-- Inhabilidades Menores -->
+                <a href="URL_A_INHABILIDADES_EN_DRIVE" target="_blank" class="flex items-center p-3 rounded-xl border border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mr-4 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-halved text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">Consulta de Inhabilidades</p>
+                        <p class="text-xs text-slate-500">Apto para trabajar con menores de edad</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-8 text-right">
+                <button onclick="document.getElementById('modal-credenciales').classList.add('hidden')" class="bg-slate-100 text-slate-700 px-6 py-2 rounded-xl font-bold hover:bg-slate-200 transition-colors">Cerrar ventana</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Términos y Condiciones -->
+    <div id="modal-terminos" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 transition-opacity">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 shadow-2xl relative">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-slate-900">Términos y Condiciones del Servicio</h3>
+                <button onclick="document.getElementById('modal-terminos').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 transition-colors">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            <div class="text-sm text-slate-600 space-y-4 leading-relaxed">
+                <p><strong class="text-slate-800">1. Pagos y Reservas:</strong> Los planes mensuales (packs de 4 y 13 horas) deben ser pagados en su totalidad por adelantado vía transferencia bancaria. Esto asegura el compromiso del estudiante y reserva de forma exclusiva su horario fijo en la agenda semanal.</p>
+                <p><strong class="text-slate-800">2. Reagendamiento y Cancelaciones:</strong> Entiendo que pueden surgir imprevistos. Las clases pueden ser reagendadas sin costo alguno siempre y cuando se avise con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas de aviso se considerarán como clase realizada y se descontarán del plan.</p>
+                <p><strong class="text-slate-800">3. Puntualidad:</strong> El tiempo de clase comienza a la hora acordada. Se otorgará un margen de 15 minutos de espera de cortesía; si el alumno no se presenta transcurrido este tiempo, la sesión se dará por realizada.</p>
+                <p><strong class="text-slate-800">4. Sesión de Diagnóstico:</strong> La primera sesión de diagnóstico (45 min) es 100% gratuita y sin compromiso de compra. Está sujeta a disponibilidad de agenda.</p>
+            </div>
+            <div class="mt-8 text-right">
+                <button onclick="document.getElementById('modal-terminos').classList.add('hidden')" class="bg-brand-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-brand-700 transition-colors">Entendido</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Botón Flotante WhatsApp -->
     <!-- REEMPLAZA EL NUMERO EN EL HREF -->
